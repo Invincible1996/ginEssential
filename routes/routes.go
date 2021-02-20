@@ -13,7 +13,7 @@ func CollectRoute(r *gin.Engine) *gin.Engine {
 
 	categoryRoutes := r.Group("/categories")
 	categoryController := controller.NewCategoryController()
-	categoryRoutes.POST("/create", categoryController.Create)
+	categoryRoutes.POST("", categoryController.Create)
 	categoryRoutes.PUT("/:id", categoryController.Update)
 	categoryRoutes.GET("/:id", categoryController.Show)
 	categoryRoutes.DELETE("/:id", categoryController.Delete)
